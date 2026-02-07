@@ -1,0 +1,533 @@
+{
+  "info": {
+    "name": "Assignment 7 - httpbin (20 tests)",
+    "_postman_id": "b2c7a4f4-4b4f-4d10-bc33-1f8f6e1c0020",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "01 GET /get?course=api-testing (echo query)",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "Accept", "value": "application/json" }],
+        "url": {
+          "raw": "https://httpbin.org/get?course=api-testing",
+          "protocol": "https",
+          "host": ["httpbin", "org"],
+          "path": ["get"],
+          "query": [{ "key": "course", "value": "api-testing" }]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status is 200', function(){ pm.response.to.have.status(200); });",
+              "pm.test('Echoes query param', function(){ const j=pm.response.json(); pm.expect(j.args.course).to.eql('api-testing'); });",
+              "pm.test('Content-Type is JSON', function(){ pm.expect(pm.response.headers.get('Content-Type')).to.include('application/json'); });"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "02 POST /post (echo JSON)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Accept", "value": "application/json" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": { "mode": "raw", "raw": "{ \"name\": \"Alisher\", \"grade\": 11 }" },
+        "url": {
+          "raw": "https://httpbin.org/post",
+          "protocol": "https",
+          "host": ["httpbin", "org"],
+          "path": ["post"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status is 200', function(){ pm.response.to.have.status(200); });",
+              "pm.test('Echoes JSON payload', function(){ const j=pm.response.json(); pm.expect(j.json.name).to.eql('Alisher'); pm.expect(j.json.grade).to.eql(11); });",
+              "pm.test('Request Content-Type echoed', function(){ const j=pm.response.json(); pm.expect(j.headers['Content-Type']).to.include('application/json'); });"
+            ]
+          }
+        }
+      ]
+    },
+
+    {
+      "name": "03 GET /headers (Accept header present)",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "Accept", "value": "application/json" }],
+        "url": {
+          "raw": "https://httpbin.org/headers",
+          "protocol": "https",
+          "host": ["httpbin", "org"],
+          "path": ["headers"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status is 200', ()=>pm.response.to.have.status(200));",
+              "pm.test('Accept echoed', function(){ const j=pm.response.json(); pm.expect(j.headers.Accept).to.include('application/json'); });"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "04 GET /user-agent (custom user-agent echoed)",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "Accept", "value": "application/json" },
+          { "key": "User-Agent", "value": "Assignment7-Postman" }
+        ],
+        "url": {
+          "raw": "https://httpbin.org/user-agent",
+          "protocol": "https",
+          "host": ["httpbin", "org"],
+          "path": ["user-agent"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status is 200', ()=>pm.response.to.have.status(200));",
+              "pm.test('User-Agent echoed', function(){ const j=pm.response.json(); pm.expect(j['user-agent']).to.include('Assignment7-Postman'); });"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "05 GET /ip (returns origin)",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "Accept", "value": "application/json" }],
+        "url": {
+          "raw": "https://httpbin.org/ip",
+          "protocol": "https",
+          "host": ["httpbin", "org"],
+          "path": ["ip"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": { "type": "text/javascript", "exec": [
+            "pm.test('Status is 200', ()=>pm.response.to.have.status(200));",
+            "pm.test('Has origin', function(){ const j=pm.response.json(); pm.expect(j).to.have.property('origin'); pm.expect(j.origin).to.be.a('string'); });"
+          ] }
+        }
+      ]
+    },
+
+    {
+      "name": "06 POST /post (empty JSON payload {}) (edge)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Accept", "value": "application/json" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": { "mode": "raw", "raw": "{}" },
+        "url": {
+          "raw": "https://httpbin.org/post",
+          "protocol": "https",
+          "host": ["httpbin", "org"],
+          "path": ["post"]
+        }
+      },
+      "event": [
+        { "listen": "test", "script": { "type": "text/javascript", "exec": [
+          "pm.test('Status is 200', ()=>pm.response.to.have.status(200));",
+          "pm.test('Echoed json is empty object', function(){ const j=pm.response.json(); pm.expect(j.json).to.eql({}); });"
+        ] } }
+      ]
+    },
+    {
+      "name": "07 POST /post (invalid JSON) (negative)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Accept", "value": "application/json" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": { "mode": "raw", "raw": "{ \"name\": \"Alisher\", " },
+        "url": {
+          "raw": "https://httpbin.org/post",
+          "protocol": "https",
+          "host": ["httpbin", "org"],
+          "path": ["post"]
+        }
+      },
+      "event": [
+        { "listen": "test", "script": { "type": "text/javascript", "exec": [
+          "pm.test('Status is 400 or 500 (server rejects invalid JSON)', function(){ pm.expect([400,500]).to.include(pm.response.code); });"
+        ] } }
+      ]
+    },
+    {
+      "name": "08 POST /post (wrong Content-Type but JSON body) (negative-ish)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Accept", "value": "application/json" },
+          { "key": "Content-Type", "value": "text/plain" }
+        ],
+        "body": { "mode": "raw", "raw": "{ \"name\": \"Alisher\" }" },
+        "url": {
+          "raw": "https://httpbin.org/post",
+          "protocol": "https",
+          "host": ["httpbin", "org"],
+          "path": ["post"]
+        }
+      },
+      "event": [
+        { "listen": "test", "script": { "type": "text/javascript", "exec": [
+          "pm.test('Status is 200', ()=>pm.response.to.have.status(200));",
+          "pm.test('Content-Type echoed as text/plain', function(){ const j=pm.response.json(); pm.expect(j.headers['Content-Type']).to.include('text/plain'); });"
+        ] } }
+      ]
+    },
+
+    {
+      "name": "09 PUT /put (echo JSON) (positive)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          { "key": "Accept", "value": "application/json" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": { "mode": "raw", "raw": "{ \"action\": \"update\", \"value\": 123 }" },
+        "url": {
+          "raw": "https://httpbin.org/put",
+          "protocol": "https",
+          "host": ["httpbin", "org"],
+          "path": ["put"]
+        }
+      },
+      "event": [
+        { "listen": "test", "script": { "type": "text/javascript", "exec": [
+          "pm.test('Status is 200', ()=>pm.response.to.have.status(200));",
+          "pm.test('Echoes json.action', function(){ const j=pm.response.json(); pm.expect(j.json.action).to.eql('update'); pm.expect(j.json.value).to.eql(123); });"
+        ] } }
+      ]
+    },
+    {
+      "name": "10 PATCH /patch (echo JSON) (positive)",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          { "key": "Accept", "value": "application/json" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": { "mode": "raw", "raw": "{ \"op\": \"replace\", \"path\": \"/name\", \"value\": \"Ali\" }" },
+        "url": {
+          "raw": "https://httpbin.org/patch",
+          "protocol": "https",
+          "host": ["httpbin", "org"],
+          "path": ["patch"]
+        }
+      },
+      "event": [
+        { "listen": "test", "script": { "type": "text/javascript", "exec": [
+          "pm.test('Status is 200', ()=>pm.response.to.have.status(200));",
+          "pm.test('Echoes json.op', function(){ const j=pm.response.json(); pm.expect(j.json.op).to.eql('replace'); });"
+        ] } }
+      ]
+    },
+    {
+      "name": "11 DELETE /delete (positive)",
+      "request": {
+        "method": "DELETE",
+        "header": [{ "key": "Accept", "value": "application/json" }],
+        "url": {
+          "raw": "https://httpbin.org/delete",
+          "protocol": "https",
+          "host": ["httpbin", "org"],
+          "path": ["delete"]
+        }
+      },
+      "event": [
+        { "listen": "test", "script": { "type": "text/javascript", "exec": [
+          "pm.test('Status is 200', ()=>pm.response.to.have.status(200));",
+          "pm.test('Has url field', function(){ const j=pm.response.json(); pm.expect(j).to.have.property('url'); pm.expect(j.url).to.include('/delete'); });"
+        ] } }
+      ]
+    },
+
+    {
+      "name": "12 GET /status/404 (negative status)",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "Accept", "value": "application/json" }],
+        "url": {
+          "raw": "https://httpbin.org/status/404",
+          "protocol": "https",
+          "host": ["httpbin", "org"],
+          "path": ["status", "404"]
+        }
+      },
+      "event": [
+        { "listen": "test", "script": { "type": "text/javascript", "exec": [
+          "pm.test('Status is 404', ()=>pm.response.to.have.status(404));"
+        ] } }
+      ]
+    },
+    {
+      "name": "13 GET /status/500 (negative status)",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "Accept", "value": "application/json" }],
+        "url": {
+          "raw": "https://httpbin.org/status/500",
+          "protocol": "https",
+          "host": ["httpbin", "org"],
+          "path": ["status", "500"]
+        }
+      },
+      "event": [
+        { "listen": "test", "script": { "type": "text/javascript", "exec": [
+          "pm.test('Status is 500', ()=>pm.response.to.have.status(500));"
+        ] } }
+      ]
+    },
+
+    {
+      "name": "14 GET /delay/2 (edge: slow response under 5s)",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "Accept", "value": "application/json" }],
+        "url": {
+          "raw": "https://httpbin.org/delay/2",
+          "protocol": "https",
+          "host": ["httpbin", "org"],
+          "path": ["delay", "2"]
+        }
+      },
+      "event": [
+        { "listen": "test", "script": { "type": "text/javascript", "exec": [
+          "pm.test('Status is 200', ()=>pm.response.to.have.status(200));",
+          "pm.test('Response time < 5000ms', function(){ pm.expect(pm.response.responseTime).to.be.below(5000); });"
+        ] } }
+      ]
+    },
+
+    {
+      "name": "15 GET /bytes/1024 (edge: binary size)",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "Accept", "value": "application/octet-stream" }],
+        "url": {
+          "raw": "https://httpbin.org/bytes/1024",
+          "protocol": "https",
+          "host": ["httpbin", "org"],
+          "path": ["bytes", "1024"]
+        }
+      },
+      "event": [
+        { "listen": "test", "script": { "type": "text/javascript", "exec": [
+          "pm.test('Status is 200', ()=>pm.response.to.have.status(200));",
+          "pm.test('Body length is 1024', function(){ pm.expect(pm.response.text().length).to.eql(1024); });"
+        ] } }
+      ]
+    },
+
+    {
+      "name": "16 GET /gzip (positive: gzip flag true)",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "Accept", "value": "application/json" }],
+        "url": {
+          "raw": "https://httpbin.org/gzip",
+          "protocol": "https",
+          "host": ["httpbin", "org"],
+          "path": ["gzip"]
+        }
+      },
+      "event": [
+        { "listen": "test", "script": { "type": "text/javascript", "exec": [
+          "pm.test('Status is 200', ()=>pm.response.to.have.status(200));",
+          "pm.test('gzip field is true', function(){ const j=pm.response.json(); pm.expect(j.gzip).to.eql(true); });"
+        ] } }
+      ]
+    },
+    {
+      "name": "17 GET /deflate (positive: deflated flag true)",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "Accept", "value": "application/json" }],
+        "url": {
+          "raw": "https://httpbin.org/deflate",
+          "protocol": "https",
+          "host": ["httpbin", "org"],
+          "path": ["deflate"]
+        }
+      },
+      "event": [
+        { "listen": "test", "script": { "type": "text/javascript", "exec": [
+          "pm.test('Status is 200', ()=>pm.response.to.have.status(200));",
+          "pm.test('deflated field is true', function(){ const j=pm.response.json(); pm.expect(j.deflated).to.eql(true); });"
+        ] } }
+      ]
+    },
+
+    {
+      "name": "18 GET /redirect-to?url=/get (edge: redirects)",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "Accept", "value": "application/json" }],
+        "url": {
+          "raw": "https://httpbin.org/redirect-to?url=/get",
+          "protocol": "https",
+          "host": ["httpbin", "org"],
+          "path": ["redirect-to"],
+          "query": [{ "key": "url", "value": "/get" }]
+        }
+      },
+      "event": [
+        { "listen": "test", "script": { "type": "text/javascript", "exec": [
+          "pm.test('Status is 200 (follow redirect enabled)', function(){ pm.expect([200,302]).to.include(pm.response.code); });"
+        ] } }
+      ]
+    },
+
+    {
+      "name": "19 GET /anything (unexpected but valid path echo) (positive)",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "Accept", "value": "application/json" }],
+        "url": {
+          "raw": "https://httpbin.org/anything/extra/path?x=1",
+          "protocol": "https",
+          "host": ["httpbin", "org"],
+          "path": ["anything", "extra", "path"],
+          "query": [{ "key": "x", "value": "1" }]
+        }
+      },
+      "event": [
+        { "listen": "test", "script": { "type": "text/javascript", "exec": [
+          "pm.test('Status is 200', ()=>pm.response.to.have.status(200));",
+          "pm.test('Echoes URL and args', function(){ const j=pm.response.json(); pm.expect(j.url).to.include('/anything/extra/path'); pm.expect(j.args.x).to.eql('1'); });"
+        ] } }
+      ]
+    },
+
+    {
+      "name": "20 Rate-limit simulation: 10 rapid GET /get (edge)",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "Accept", "value": "application/json" }],
+        "url": {
+          "raw": "https://httpbin.org/get?burst=1",
+          "protocol": "https",
+          "host": ["httpbin", "org"],
+          "path": ["get"],
+          "query": [{ "key": "burst", "value": "1" }]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "// This test is meant to be run with Collection Runner set to 10 iterations (rapid).",
+              "pm.test('Status is 200', ()=>pm.response.to.have.status(200));",
+              "pm.test('Echoes burst param', function(){ const j=pm.response.json(); pm.expect(j.args.burst).to.eql('1'); });"
+            ]
+          }
+        }
+      ]
+    },
+
+    {
+      "name": "21 INVALID endpoint path /does-not-exist (negative)",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "Accept", "value": "application/json" }],
+        "url": {
+          "raw": "https://httpbin.org/does-not-exist",
+          "protocol": "https",
+          "host": ["httpbin", "org"],
+          "path": ["does-not-exist"]
+        }
+      },
+      "event": [
+        { "listen": "test", "script": { "type": "text/javascript", "exec": [
+          "pm.test('Status is 404', ()=>pm.response.to.have.status(404));"
+        ] } }
+      ]
+    },
+
+    {
+      "name": "22 Unsupported method: TRACE /get (negative)",
+      "request": {
+        "method": "TRACE",
+        "header": [{ "key": "Accept", "value": "application/json" }],
+        "url": {
+          "raw": "https://httpbin.org/get",
+          "protocol": "https",
+          "host": ["httpbin", "org"],
+          "path": ["get"]
+        }
+      },
+      "event": [
+        { "listen": "test", "script": { "type": "text/javascript", "exec": [
+          "pm.test('Status is 405 or 200 depending on server policy', function(){ pm.expect([200,405]).to.include(pm.response.code); });"
+        ] } }
+      ]
+    },
+
+    {
+      "name": "23 Very large payload POST /post (edge)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Accept", "value": "application/json" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"big\": \"{{BIG_TEXT}}\" }"
+        },
+        "url": {
+          "raw": "https://httpbin.org/post",
+          "protocol": "https",
+          "host": ["httpbin", "org"],
+          "path": ["post"]
+        }
+      },
+      "event": [
+        { "listen": "test", "script": { "type": "text/javascript", "exec": [
+          "pm.test('Status is 200', ()=>pm.response.to.have.status(200));",
+          "pm.test('Echoes big field exists', function(){ const j=pm.response.json(); pm.expect(j.json).to.have.property('big'); });"
+        ] } }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "BIG_TEXT",
+      "value": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    }
+  ]
+}
