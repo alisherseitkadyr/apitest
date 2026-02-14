@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.alisher.httpbin.runners.CucumberTest" time="15.177" tests="2" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.alisher.httpbin.runners.CucumberTest" time="33.685" tests="15" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -13,14 +13,14 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-17-openjdk-amd64/lib"/>
-    <property name="sun.java.command" value="/home/alisher/Downloads/SQAT/apitest/assignment7-httpbin/target/surefire/surefirebooter-20260207114820631_3.jar /home/alisher/Downloads/SQAT/apitest/assignment7-httpbin/target/surefire 2026-02-07T11-48-20_526-jvmRun1 surefire-20260207114820631_1tmp surefire_0-20260207114820631_2tmp"/>
+    <property name="sun.java.command" value="/home/alisher/Downloads/SQAT/apitest/assignment7-httpbin/target/surefire/surefirebooter-20260214112210939_3.jar /home/alisher/Downloads/SQAT/apitest/assignment7-httpbin/target/surefire 2026-02-14T11-22-10_857-jvmRun1 surefire-20260214112210939_1tmp surefire_0-20260214112210939_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/home/alisher/Downloads/SQAT/apitest/assignment7-httpbin/target/test-classes:/home/alisher/Downloads/SQAT/apitest/assignment7-httpbin/target/classes:/home/alisher/.m2/repository/org/junit/platform/junit-platform-suite-api/1.10.2/junit-platform-suite-api-1.10.2.jar:/home/alisher/.m2/repository/org/junit/platform/junit-platform-commons/1.10.2/junit-platform-commons-1.10.2.jar:/home/alisher/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/alisher/.m2/repository/org/junit/platform/junit-platform-suite/1.10.2/junit-platform-suite-1.10.2.jar:/home/alisher/.m2/repository/org/junit/platform/junit-platform-suite-engine/1.10.2/junit-platform-suite-engine-1.10.2.jar:/home/alisher/.m2/repository/org/junit/platform/junit-platform-suite-commons/1.10.2/junit-platform-suite-commons-1.10.2.jar:/home/alisher/.m2/repository/org/junit/platform/junit-platform-launcher/1.10.2/junit-platform-launcher-1.10.2.jar:/home/alisher/.m2/repository/io/cucumber/cucumber-java/7.18.0/cucumber-java-7.18.0.jar:/home/alisher/.m2/repository/io/cucumber/cucumber-core/7.18.0/cucumber-core-7.18.0.jar:/home/alisher/.m2/repository/io/cucumber/cucumber-gherkin/7.18.0/cucumber-gherkin-7.18.0.jar:/home/alisher/.m2/repository/io/cucumber/cucumber-gherkin-messages/7.18.0/cucumber-gherkin-messages-7.18.0.jar:/home/alisher/.m2/repository/io/cucumber/gherkin/28.0.0/gherkin-28.0.0.jar:/home/alisher/.m2/repository/io/cucumber/messages/24.1.0/messages-24.1.0.jar:/home/alisher/.m2/repository/io/cucumber/testng-xml-formatter/0.1.0/testng-xml-formatter-0.1.0.jar:/home/alisher/.m2/repository/io/cucumber/query/12.2.0/query-12.2.0.jar:/home/alisher/.m2/repository/io/cucumber/tag-expressions/6.1.0/tag-expressions-6.1.0.jar:/home/alisher/.m2/repository/io/cucumber/cucumber-expressions/17.1.0/cucumber-expressions-17.1.0.jar:/home/alisher/.m2/repository/io/cucumber/datatable/7.18.0/datatable-7.18.0.jar:/home/alisher/.m2/repository/io/cucumber/cucumber-plugin/7.18.0/cucumber-plugin-7.18.0.jar:/home/alisher/.m2/repository/io/cucumber/docstring/7.18.0/docstring-7.18.0.jar:/home/alisher/.m2/repository/io/cucumber/html-formatter/21.3.1/html-formatter-21.3.1.jar:/home/alisher/.m2/repository/io/cucumber/junit-xml-formatter/0.4.0/junit-xml-formatter-0.4.0.jar:/home/alisher/.m2/repository/io/cucumber/ci-environment/10.0.1/ci-environment-10.0.1.jar:/home/alisher/.m2/repository/io/cucumber/cucumber-junit-platform-engine/7.18.0/cucumber-junit-platform-engine-7.18.0.jar:/home/alisher/.m2/repository/org/junit/platform/junit-platform-engine/1.10.2/junit-platform-engine-1.10.2.jar:/home/alisher/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/alisher/.m2/repository/io/cucumber/cucumber-picocontainer/7.18.0/cucumber-picocontainer-7.18.0.jar:/home/alisher/.m2/repository/org/picocontainer/picocontainer/2.15/picocontainer-2.15.jar:/home/alisher/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.2/junit-jupiter-5.10.2.jar:/home/alisher/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.2/junit-jupiter-api-5.10.2.jar:/home/alisher/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.2/junit-jupiter-params-5.10.2.jar:/home/alisher/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.2/junit-jupiter-engine-5.10.2.jar:/home/alisher/.m2/repository/io/rest-assured/rest-assured/5.5.0/rest-assured-5.5.0.jar:/home/alisher/.m2/repository/org/apache/groovy/groovy/4.0.22/groovy-4.0.22.jar:/home/alisher/.m2/repository/org/apache/groovy/groovy-xml/4.0.22/groovy-xml-4.0.22.jar:/home/alisher/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/home/alisher/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar:/home/alisher/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/alisher/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/home/alisher/.m2/repository/org/apache/httpcomponents/httpmime/4.5.13/httpmime-4.5.13.jar:/home/alisher/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/home/alisher/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/home/alisher/.m2/repository/io/rest-assured/json-path/5.5.0/json-path-5.5.0.jar:/home/alisher/.m2/repository/org/apache/groovy/groovy-json/4.0.22/groovy-json-4.0.22.jar:/home/alisher/.m2/repository/io/rest-assured/rest-assured-common/5.5.0/rest-assured-common-5.5.0.jar:/home/alisher/.m2/repository/io/rest-assured/xml-path/5.5.0/xml-path-5.5.0.jar:/home/alisher/.m2/repository/org/apache/commons/commons-lang3/3.11/commons-lang3-3.11.jar:/home/alisher/.m2/repository/com/jayway/jsonpath/json-path/2.9.0/json-path-2.9.0.jar:/home/alisher/.m2/repository/net/minidev/json-smart/2.5.0/json-smart-2.5.0.jar:/home/alisher/.m2/repository/net/minidev/accessors-smart/2.5.0/accessors-smart-2.5.0.jar:/home/alisher/.m2/repository/org/ow2/asm/asm/9.3/asm-9.3.jar:/home/alisher/.m2/repository/org/slf4j/slf4j-api/2.0.11/slf4j-api-2.0.11.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/home/alisher"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="java.version.date" value="2025-10-21"/>
+    <property name="java.version.date" value="2026-01-20"/>
     <property name="java.home" value="/usr/lib/jvm/java-17-openjdk-amd64"/>
     <property name="file.separator" value="/"/>
     <property name="basedir" value="/home/alisher/Downloads/SQAT/apitest/assignment7-httpbin"/>
@@ -28,9 +28,9 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="/home/alisher/Downloads/SQAT/apitest/assignment7-httpbin/target/surefire/surefirebooter-20260207114820631_3.jar"/>
+    <property name="surefire.real.class.path" value="/home/alisher/Downloads/SQAT/apitest/assignment7-httpbin/target/surefire/surefirebooter-20260214112210939_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="java.runtime.version" value="17.0.17+10-Ubuntu-124.04"/>
+    <property name="java.runtime.version" value="17.0.18+8-Ubuntu-124.04.1"/>
     <property name="user.name" value="alisher"/>
     <property name="path.separator" value=":"/>
     <property name="os.version" value="6.14.0-37-generic"/>
@@ -40,7 +40,7 @@
     <property name="localRepository" value="/home/alisher/.m2/repository"/>
     <property name="java.vendor.url.bug" value="https://bugs.launchpad.net/ubuntu/+source/openjdk-17"/>
     <property name="java.io.tmpdir" value="/tmp"/>
-    <property name="java.version" value="17.0.17"/>
+    <property name="java.version" value="17.0.18"/>
     <property name="user.dir" value="/home/alisher/Downloads/SQAT/apitest/assignment7-httpbin"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
@@ -48,12 +48,12 @@
     <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
     <property name="java.vendor" value="Ubuntu"/>
-    <property name="java.vm.version" value="17.0.17+10-Ubuntu-124.04"/>
+    <property name="java.vm.version" value="17.0.18+8-Ubuntu-124.04.1"/>
     <property name="java.specification.maintenance.version" value="1"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="GET /get returns 200 and echoes query param" classname="httpbin GET endpoint basic checks" time="6.729">
+  <testcase name="GET /get returns 200 and echoes query param" classname="httpbin GET endpoint basic checks" time="2.651">
     <system-out><![CDATA[
 Scenario: GET /get returns 200 and echoes query param             &amp#27;[90m# features/httpbin_get.feature:3&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mhttpbin base is configured&amp#27;[0m                                &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.httpbin_base_is_configured()&amp#27;[0m
@@ -63,7 +63,91 @@ Scenario: GET /get returns 200 and echoes query param             &amp#27;[90m# 
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mresponse JSON path &amp#27;[0m&amp#27;[32m&amp#27;[1m"args.course"&amp#27;[0m&amp#27;[32m should equal &amp#27;[0m&amp#27;[32m&amp#27;[1m"api-testing"&amp#27;[0m &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.response_json_path_should_equal(java.lang.String,java.lang.String)&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="POST /post returns 200 and echoes JSON payload" classname="httpbin POST endpoint basic checks" time="8.333">
+  <testcase name="GET /get with multiple query parameters" classname="httpbin GET endpoint basic checks" time="3.176">
+    <system-out><![CDATA[
+Scenario: GET /get with multiple query parameters        &amp#27;[90m# features/httpbin_get.feature:10&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mhttpbin base is configured&amp#27;[0m                       &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.httpbin_base_is_configured()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mquery param &amp#27;[0m&amp#27;[32m&amp#27;[1m"name"&amp#27;[0m&amp#27;[32m equals &amp#27;[0m&amp#27;[32m&amp#27;[1m"John"&amp#27;[0m                   &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.query_param_equals(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mquery param &amp#27;[0m&amp#27;[32m&amp#27;[1m"age"&amp#27;[0m&amp#27;[32m equals &amp#27;[0m&amp#27;[32m&amp#27;[1m"30"&amp#27;[0m                      &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.query_param_equals(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI send GET request to &amp#27;[0m&amp#27;[32m&amp#27;[1m"/get"&amp#27;[0m                      &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.i_send_get_request_to(java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mstatus code should be &amp#27;[0m&amp#27;[32m&amp#27;[1m200&amp#27;[0m                         &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.status_code_should_be(java.lang.Integer)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mresponse JSON path &amp#27;[0m&amp#27;[32m&amp#27;[1m"args.name"&amp#27;[0m&amp#27;[32m should equal &amp#27;[0m&amp#27;[32m&amp#27;[1m"John"&amp#27;[0m &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.response_json_path_should_equal(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mresponse JSON path &amp#27;[0m&amp#27;[32m&amp#27;[1m"args.age"&amp#27;[0m&amp#27;[32m should equal &amp#27;[0m&amp#27;[32m&amp#27;[1m"30"&amp#27;[0m    &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.response_json_path_should_equal(java.lang.String,java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="GET /headers returns request headers" classname="httpbin GET endpoint basic checks" time="2.086">
+    <system-out><![CDATA[
+Scenario: GET /headers returns request headers                               &amp#27;[90m# features/httpbin_get.feature:19&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mhttpbin base is configured&amp#27;[0m                                           &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.httpbin_base_is_configured()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mheader &amp#27;[0m&amp#27;[32m&amp#27;[1m"X-Custom-Header"&amp#27;[0m&amp#27;[32m equals &amp#27;[0m&amp#27;[32m&amp#27;[1m"test-value"&amp#27;[0m                           &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.header_equals(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI send GET request to &amp#27;[0m&amp#27;[32m&amp#27;[1m"/headers"&amp#27;[0m                                      &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.i_send_get_request_to(java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mstatus code should be &amp#27;[0m&amp#27;[32m&amp#27;[1m200&amp#27;[0m                                             &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.status_code_should_be(java.lang.Integer)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mresponse JSON path &amp#27;[0m&amp#27;[32m&amp#27;[1m"headers.X-Custom-Header"&amp#27;[0m&amp#27;[32m should equal &amp#27;[0m&amp#27;[32m&amp#27;[1m"test-value"&amp#27;[0m &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.response_json_path_should_equal(java.lang.String,java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="GET /user-agent returns user agent" classname="httpbin GET endpoint basic checks" time="2.075">
+    <system-out><![CDATA[
+Scenario: GET /user-agent returns user agent              &amp#27;[90m# features/httpbin_get.feature:26&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mhttpbin base is configured&amp#27;[0m                        &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.httpbin_base_is_configured()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI send GET request to &amp#27;[0m&amp#27;[32m&amp#27;[1m"/user-agent"&amp#27;[0m                &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.i_send_get_request_to(java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mstatus code should be &amp#27;[0m&amp#27;[32m&amp#27;[1m200&amp#27;[0m                          &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.status_code_should_be(java.lang.Integer)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mresponse JSON path &amp#27;[0m&amp#27;[32m&amp#27;[1m"user-agent"&amp#27;[0m&amp#27;[32m should not be empty&amp#27;[0m &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.response_json_path_should_not_be_empty(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="GET /ip returns client IP" classname="httpbin GET endpoint basic checks" time="3.461">
+    <system-out><![CDATA[
+Scenario: GET /ip returns client IP                   &amp#27;[90m# features/httpbin_get.feature:32&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mhttpbin base is configured&amp#27;[0m                    &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.httpbin_base_is_configured()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI send GET request to &amp#27;[0m&amp#27;[32m&amp#27;[1m"/ip"&amp#27;[0m                    &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.i_send_get_request_to(java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mstatus code should be &amp#27;[0m&amp#27;[32m&amp#27;[1m200&amp#27;[0m                      &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.status_code_should_be(java.lang.Integer)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mresponse JSON path &amp#27;[0m&amp#27;[32m&amp#27;[1m"origin"&amp#27;[0m&amp#27;[32m should not be empty&amp#27;[0m &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.response_json_path_should_not_be_empty(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="GET /status/200 returns 200" classname="Placeholder for additional Assignment 7 scenarios" time="4.025">
+    <system-out><![CDATA[
+Scenario: GET /status/200 returns 200      &amp#27;[90m# features/httpbin_misc.feature:3&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mhttpbin base is configured&amp#27;[0m         &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.httpbin_base_is_configured()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI send GET request to &amp#27;[0m&amp#27;[32m&amp#27;[1m"/status/200"&amp#27;[0m &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.i_send_get_request_to(java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mstatus code should be &amp#27;[0m&amp#27;[32m&amp#27;[1m200&amp#27;[0m           &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.status_code_should_be(java.lang.Integer)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="GET /uuid returns unique identifier" classname="Placeholder for additional Assignment 7 scenarios" time="0.996">
+    <system-out><![CDATA[
+Scenario: GET /uuid returns unique identifier       &amp#27;[90m# features/httpbin_misc.feature:8&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mhttpbin base is configured&amp#27;[0m                  &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.httpbin_base_is_configured()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI send GET request to &amp#27;[0m&amp#27;[32m&amp#27;[1m"/uuid"&amp#27;[0m                &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.i_send_get_request_to(java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mstatus code should be &amp#27;[0m&amp#27;[32m&amp#27;[1m200&amp#27;[0m                    &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.status_code_should_be(java.lang.Integer)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mresponse JSON path &amp#27;[0m&amp#27;[32m&amp#27;[1m"uuid"&amp#27;[0m&amp#27;[32m should not be empty&amp#27;[0m &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.response_json_path_should_not_be_empty(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="GET /anything returns all request details" classname="Placeholder for additional Assignment 7 scenarios" time="1.11">
+    <system-out><![CDATA[
+Scenario: GET /anything returns all request details       &amp#27;[90m# features/httpbin_misc.feature:14&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mhttpbin base is configured&amp#27;[0m                        &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.httpbin_base_is_configured()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mquery param &amp#27;[0m&amp#27;[32m&amp#27;[1m"test"&amp#27;[0m&amp#27;[32m equals &amp#27;[0m&amp#27;[32m&amp#27;[1m"value"&amp#27;[0m                   &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.query_param_equals(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI send GET request to &amp#27;[0m&amp#27;[32m&amp#27;[1m"/anything/mypath"&amp#27;[0m           &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.i_send_get_request_to(java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mstatus code should be &amp#27;[0m&amp#27;[32m&amp#27;[1m200&amp#27;[0m                          &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.status_code_should_be(java.lang.Integer)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mresponse JSON path &amp#27;[0m&amp#27;[32m&amp#27;[1m"args.test"&amp#27;[0m&amp#27;[32m should equal &amp#27;[0m&amp#27;[32m&amp#27;[1m"value"&amp#27;[0m &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.response_json_path_should_equal(java.lang.String,java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="GET /get with no parameters returns empty args" classname="Placeholder for additional Assignment 7 scenarios" time="0.957">
+    <system-out><![CDATA[
+Scenario: GET /get with no parameters returns empty args &amp#27;[90m# features/httpbin_misc.feature:21&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mhttpbin base is configured&amp#27;[0m                       &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.httpbin_base_is_configured()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI send GET request to &amp#27;[0m&amp#27;[32m&amp#27;[1m"/get"&amp#27;[0m                      &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.i_send_get_request_to(java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mstatus code should be &amp#27;[0m&amp#27;[32m&amp#27;[1m200&amp#27;[0m                         &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.status_code_should_be(java.lang.Integer)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mresponse JSON path &amp#27;[0m&amp#27;[32m&amp#27;[1m"args"&amp#27;[0m&amp#27;[32m should not be empty&amp#27;[0m      &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.response_json_path_should_not_be_empty(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="GET /base64 endpoint returns valid content" classname="Placeholder for additional Assignment 7 scenarios" time="1.861">
+    <system-out><![CDATA[
+Scenario: GET /base64 endpoint returns valid content            &amp#27;[90m# features/httpbin_misc.feature:27&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mhttpbin base is configured&amp#27;[0m                              &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.httpbin_base_is_configured()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI send GET request to &amp#27;[0m&amp#27;[32m&amp#27;[1m"/base64/SFRUUEJJTiBpcyBhd2Vzb21l"&amp#27;[0m &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.i_send_get_request_to(java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mstatus code should be &amp#27;[0m&amp#27;[32m&amp#27;[1m200&amp#27;[0m                                &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.status_code_should_be(java.lang.Integer)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="POST /post returns 200 and echoes JSON payload" classname="httpbin POST endpoint basic checks" time="1.395">
     <system-out><![CDATA[
 Scenario: POST /post returns 200 and echoes JSON payload    &amp#27;[90m# features/httpbin_post.feature:3&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mhttpbin base is configured&amp#27;[0m                          &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.httpbin_base_is_configured()&amp#27;[0m
@@ -72,6 +156,47 @@ Scenario: POST /post returns 200 and echoes JSON payload    &amp#27;[90m# featur
   &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI send POST request to &amp#27;[0m&amp#27;[32m&amp#27;[1m"/post"&amp#27;[0m                       &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.i_send_post_request_to(java.lang.String)&amp#27;[0m
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32mstatus code should be &amp#27;[0m&amp#27;[32m&amp#27;[1m200&amp#27;[0m                            &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.status_code_should_be(java.lang.Integer)&amp#27;[0m
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mresponse JSON path &amp#27;[0m&amp#27;[32m&amp#27;[1m"json.name"&amp#27;[0m&amp#27;[32m should equal &amp#27;[0m&amp#27;[32m&amp#27;[1m"Alisher"&amp#27;[0m &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.response_json_path_should_equal(java.lang.String,java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="POST /post with complex JSON structure" classname="httpbin POST endpoint basic checks" time="1.06">
+    <system-out><![CDATA[
+Scenario: POST /post with complex JSON structure                       &amp#27;[90m# features/httpbin_post.feature:14&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mhttpbin base is configured&amp#27;[0m                                     &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.httpbin_base_is_configured()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mJSON body is&amp#27;[0m                                                     &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.json_body_is(java.lang.String)&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI send POST request to &amp#27;[0m&amp#27;[32m&amp#27;[1m"/post"&amp#27;[0m                                  &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.i_send_post_request_to(java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mstatus code should be &amp#27;[0m&amp#27;[32m&amp#27;[1m200&amp#27;[0m                                       &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.status_code_should_be(java.lang.Integer)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mresponse JSON path &amp#27;[0m&amp#27;[32m&amp#27;[1m"json.user"&amp#27;[0m&amp#27;[32m should equal &amp#27;[0m&amp#27;[32m&amp#27;[1m"alice"&amp#27;[0m              &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.response_json_path_should_equal(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mresponse JSON path &amp#27;[0m&amp#27;[32m&amp#27;[1m"json.email"&amp#27;[0m&amp#27;[32m should equal &amp#27;[0m&amp#27;[32m&amp#27;[1m"alice@example.com"&amp#27;[0m &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.response_json_path_should_equal(java.lang.String,java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="POST /post returns echoed data" classname="httpbin POST endpoint basic checks" time="4.23">
+    <system-out><![CDATA[
+Scenario: POST /post returns echoed data                           &amp#27;[90m# features/httpbin_post.feature:25&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mhttpbin base is configured&amp#27;[0m                                 &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.httpbin_base_is_configured()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mJSON body is&amp#27;[0m                                                 &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.json_body_is(java.lang.String)&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI send POST request to &amp#27;[0m&amp#27;[32m&amp#27;[1m"/post"&amp#27;[0m                              &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.i_send_post_request_to(java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mstatus code should be &amp#27;[0m&amp#27;[32m&amp#27;[1m200&amp#27;[0m                                   &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.status_code_should_be(java.lang.Integer)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mresponse JSON path &amp#27;[0m&amp#27;[32m&amp#27;[1m"json.message"&amp#27;[0m&amp#27;[32m should equal &amp#27;[0m&amp#27;[32m&amp#27;[1m"hello world"&amp#27;[0m &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.response_json_path_should_equal(java.lang.String,java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="POST /post with array in JSON" classname="httpbin POST endpoint basic checks" time="3.371">
+    <system-out><![CDATA[
+Scenario: POST /post with array in JSON                   &amp#27;[90m# features/httpbin_post.feature:35&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mhttpbin base is configured&amp#27;[0m                        &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.httpbin_base_is_configured()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mJSON body is&amp#27;[0m                                        &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.json_body_is(java.lang.String)&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI send POST request to &amp#27;[0m&amp#27;[32m&amp#27;[1m"/post"&amp#27;[0m                     &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.i_send_post_request_to(java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mstatus code should be &amp#27;[0m&amp#27;[32m&amp#27;[1m200&amp#27;[0m                          &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.status_code_should_be(java.lang.Integer)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mresponse JSON path &amp#27;[0m&amp#27;[32m&amp#27;[1m"json.items"&amp#27;[0m&amp#27;[32m should not be empty&amp#27;[0m &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.response_json_path_should_not_be_empty(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="POST /post returns request headers" classname="httpbin POST endpoint basic checks" time="1.146">
+    <system-out><![CDATA[
+Scenario: POST /post returns request headers             &amp#27;[90m# features/httpbin_post.feature:45&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mhttpbin base is configured&amp#27;[0m                       &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.httpbin_base_is_configured()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mJSON body is&amp#27;[0m                                       &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.json_body_is(java.lang.String)&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI send POST request to &amp#27;[0m&amp#27;[32m&amp#27;[1m"/post"&amp#27;[0m                    &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.i_send_post_request_to(java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mstatus code should be &amp#27;[0m&amp#27;[32m&amp#27;[1m200&amp#27;[0m                         &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.status_code_should_be(java.lang.Integer)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mresponse JSON path &amp#27;[0m&amp#27;[32m&amp#27;[1m"json.test"&amp#27;[0m&amp#27;[32m should equal &amp#27;[0m&amp#27;[32m&amp#27;[1m"data"&amp#27;[0m &amp#27;[90m# com.alisher.httpbin.steps.HttpBinSteps.response_json_path_should_equal(java.lang.String,java.lang.String)&amp#27;[0m
 ]]></system-out>
   </testcase>
 </testsuite>
