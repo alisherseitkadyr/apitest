@@ -1,4 +1,4 @@
-# Assignment 7 — API Testing (httpbin) + Java BDD (Cucumber)
+API Testing (httpbin) + Java BDD (Cucumber)
 
 System under test: https://httpbin.org  
 Tools: Postman + Java (REST Assured) + Cucumber (BDD)
